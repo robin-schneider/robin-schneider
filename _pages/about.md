@@ -2,23 +2,22 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: Researcher at the intersection of string theory and data science.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.JPG
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Office: 92111</p>
+    <p>Ångströmlaboratoriet</p>
+    <p>752 37 Uppsala</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a PhD student at Uppsala University investigating heterotic compactifications on Calabi-Yau manifolds in Magdalena Larfors group. I am particularly interested in applying tools from machine learning to problems in string theory. Such applications include on the one [hand](https://arxiv.org/abs/2003.04817) the finding of realistic string compactifications with Actor-Critic agents from reinforcement learning. On the other [hand](https://arxiv.org/abs/2108.02221) I employ deep convolutional state-of-the-art image recognition architecture to learn the cohomologies of Calabi-Yau manifolds. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Before coming to Uppsala I did my undergraduates in physics at the [University of Münster](https://www.uni-muenster.de/en/) with an Erasmus year at [Lund University](https://www.lunduniversity.lu.se/). During my master studies I also participated in a one year research exchange with [IPMU](https://www.ipmu.jp/en) at the [University of Tokyo](https://www.u-tokyo.ac.jp/en/). 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
