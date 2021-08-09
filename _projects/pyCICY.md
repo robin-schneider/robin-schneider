@@ -7,7 +7,7 @@ importance: 1
 category: work
 ---
 
-Calabi-Yau manifolds are an important ingredient in string theory compactifications. Their topological quantities can be related to for example the number of massless fermion generations in the four-dimensional theory. Complete Intersection Calabi-Yau (CICY) manifolds are one of the most common constructions. There are 7890 three-folds and almost a million four-folds.
+Calabi-Yau manifolds are an important ingredient in string theory compactifications. Their topological quantities can be related to, for example, the number of massless fermion generations in the four-dimensional theory. Complete Intersection Calabi-Yau (CICY) manifolds are one of the most common constructions. There are 7890 three-folds and almost a million four-folds.
 
 #### The package
 
