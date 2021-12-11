@@ -2,7 +2,7 @@
 layout: page
 title: cymetric
 description: A python library for studying Calabi-Yau metrics.
-img: /assets/img/calabiyau_metric.png
+img: /assets/img/calabiyau_metric.jpg
 importance: 1
 category: work
 ---
