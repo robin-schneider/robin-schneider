@@ -2,7 +2,7 @@
 layout: page
 title: gymCICY
 description: An OpenAI gym for studying heterotic line bundle models.
-img: /assets/img/pregame.png
+img: assets/img/pregame.png
 importance: 1
 category: work
 ---

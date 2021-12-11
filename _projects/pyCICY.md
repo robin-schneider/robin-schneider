@@ -2,7 +2,7 @@
 layout: page
 title: pyCICY
 description: A python CICY toolkit.
-img: /assets/img/calabiyau.jpg
+img: assets/img/calabiyau.jpg
 importance: 1
 category: work
 ---
