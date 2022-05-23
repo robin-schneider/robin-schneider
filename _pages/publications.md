@@ -4,7 +4,7 @@ permalink: /publications/
 title: publications
 description: > 
   Here is a list of all my publications. 
-years: [2021, 2020, 2019, 2017]
+years: [2022, 2021, 2020, 2019, 2017]
 nav: true
 ---
 

@@ -31,8 +31,8 @@ vol_moduli = np.ones(1)
 ambient = np.array([4])
 dirname = 'fermat'
 pg = PointGenerator(monomials, shape_moduli, vol_moduli, ambient)
-pg.prepare_dataset(200000, dirname)
-pg.prepare_basis(dirname)
+kappa = pg.prepare_dataset(200000, dirname)
+pg.prepare_basis(dirname, kappa = kappa)
 ```
 
 ### The PhiFSModel
@@ -43,7 +43,7 @@ $$
 g_{CY} = g_{FS} + \partial \bar\partial \phi
 $$
 
-and in the same Kähler class as the reference metric. Let's find a metric for the Fermat.
+and in the same Kähler class as the reference metric when the Kähler loss is enforced. Let's find a metric for the Fermat.
 
 ```python
 import tensorflow.keras as tfk
@@ -53,17 +53,18 @@ from cymetric.models.metrics import *
 data = np.load(dirname+'/dataset.npz'))
 BASIS = prepare_tf_basis(np.load(dirname+'/basis.pickle'), allow_pickle=True))
 weights = data['y_train'][:,0]
-kappa = 1/np.mean(weights)
 nn = tfk.Sequential([tfk.Input(shape=(10)),
                     tfk.layers.Dense(64, activation='gelu'),
                     tfk.layers.Dense(64, activation='gelu'),
                     tfk.layers.Dense(64, activation='gelu'),
                     tfk.layers.Dense(1, use_bias='False')])
-model = MultFSModel(nn, BASIS, kappa=kappa)
-cmetrics = [TotalLoss(), SigmaLoss(), TransitionLoss()]
+model = PhiFSModel(nn, BASIS, kappa=kappa)
+cmetrics = [TotalLoss(), SigmaLoss(), Volkloss()]
 model.compile(custom_metrics = cmetrics, optimizer=tfk.optimizers.Adam())
-history = model.fit(data['X_train'], data['y_train'], epochs=100, batch_size=64,
-                    validation_split=0.1, verbose=1, sample_weight=weights)
+history = model.fit(
+    data['X_train'], data['y_train'], epochs=100, batch_size=64,
+    validation_split=0.1, verbose=1, sample_weight=weights
+    )
 ```
 
 
