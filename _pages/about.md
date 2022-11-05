@@ -2,22 +2,22 @@
 layout: about
 title: about
 permalink: /
-description: Physicist interested in Machine Learning applications.
+description: Machine learning engineer and former theoretical physicist.
 
 profile:
   align: right
   image: prof_pic.JPG
   address: >
-    <p>Office: 92111</p>
-    <p>Ångströmlaboratoriet</p>
-    <p>752 37 Uppsala</p>
+    <p>ASML Building 3</p>
+    <p>De Run 6503</p>
+    <p>5504 DR Veldhoven</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently working at ASML as a Product Performance Engineeer. In this role I leverage machine learning to find novel ways of inferring physical quantities from optical metrology data.
+I am currently working at ASML as a machine learning engineer. I'm part of modeling and inference group lead by Henk-Jan Smilde. As part of my work I leverage deep learning and techniques from computer vision to analyze images from the YieldStar. In addition I'm improving the whole MLops and data orchestration pipeline from acquiring and processing data to training and selecting the best ML models to finally deploying them.
 
 Before that I was a PhD student at Uppsala University investigating heterotic compactifications on Calabi-Yau manifolds in [Magdalena Larfors](https://inspirehep.net/authors/1034652?ui-citation-summary=true) group. In my thesis I used techniques from machine learning to solve problems in string theory. For example, I found semi-realistic string compactifications with [Actor-Critic agents](https://arxiv.org/abs/2003.04817) from reinforcement learning. On the other hand, I employed [deep convolutional](https://arxiv.org/abs/2108.02221) neural nets to learn the cohomologies of Calabi-Yau manifolds and developed a [tensorflow package](https://github.com/pythoncymetric/cymetric) to find solutions to the multi-objective optimisation problem of finding [Ricci-flat metrics](https://ml4physicalsciences.github.io/2021/files/NeurIPS_ML4PS_2021_37.pdf).
 
