@@ -2,7 +2,7 @@
 <html lang="">
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://robin-schneider.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Robin  Schneider
 
 
-  | Page not found
+  | pyCICY
 
 </title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RS</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="https://robin-schneider.github.io/404.html">
+<link rel="canonical" href="https://robin-schneider.github.io/projects/pyCICY/">
 
 
 <!-- Dark Mode -->
@@ -153,12 +153,53 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">pyCICY</h1>
+    <p class="post-description">A python CICY toolkit.</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://robin-schneider.github.io/">here</a>.</p>
+    <p>Calabi-Yau manifolds are an important ingredient in string theory compactifications. Their topological quantities can be related to, for example, the number of massless fermion generations in the four-dimensional theory. Complete Intersection Calabi-Yau (CICY) manifolds are one of the most common constructions. There are 7890 three-folds and almost a million four-folds.</p>
+
+<h4 id="the-package">The package</h4>
+
+<p><a href="https://github.com/robin-schneider/CICY" target="_blank" rel="noopener noreferrer">pyCICY</a> lets you compute various quantites, such as Chern classes, triple intersection numbers or Hodge numbers of tangent and line bundles. It’s a python package mostly utilizing <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer">numpy</a> for the underlying computations. Installation is straightforwad with <a href="https://pypi.org/project/pip/" target="_blank" rel="noopener noreferrer">pip</a>. For the latest version install from github</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pip install --user git+https://github.com/robin-schneider/CICY
+</span></code></pre></div></div>
+
+<h4 id="the-quintic">The Quintic</h4>
+
+<p>Take for example the quintic manifold given by a homogeneous polynomial of degree five in \(\mathbb{P}^4\):</p>
+
+\[\mathcal{Q} \in [4|5]\]
+
+<p>We import the <code class="language-plaintext highlighter-rouge">CICY</code> module</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pyCICY</span> <span class="kn">import</span> <span class="n">CICY</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+</code></pre></div></div>
+
+<p>define the configuration matrix as a numpy array and initialize a new CICY object</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">configuration_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
+<span class="n">quintic</span> <span class="o">=</span> <span class="nc">CICY</span><span class="p">(</span><span class="n">configuration_matrix</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Next we can compute the Hodge numbers of a line bundle</p>
+
+\[h^\bullet (\mathcal{Q}, \mathcal{O}(3)) = (35,0,0,0)\]
+
+<p>with</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">line_bundle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">quintic</span><span class="p">.</span><span class="nf">line_co</span><span class="p">(</span><span class="n">line_bundle</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">array</span><span class="p">([</span><span class="mf">35.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>For a full list of functionality run:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">help</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</code></pre></div></div>
 
   </article>
 

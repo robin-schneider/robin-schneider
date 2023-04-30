@@ -2,7 +2,7 @@
 <html lang="">
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://robin-schneider.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Robin  Schneider
 
 
-  | Page not found
+  | gymCICY
 
 </title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RS</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="https://robin-schneider.github.io/404.html">
+<link rel="canonical" href="https://robin-schneider.github.io/projects/gymCICY/">
 
 
 <!-- Dark Mode -->
@@ -153,12 +153,22 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">gymCICY</h1>
+    <p class="post-description">An OpenAI gym for studying heterotic line bundle models.</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://robin-schneider.github.io/">here</a>.</p>
+    <p>Heterotic line bundle models are the <a href="https://arxiv.org/abs/1810.00444" target="_blank" rel="noopener noreferrer">most</a> succesful construction of realistic compactification for the heterotic string. The number of configurations to consider in systematic scans scales exponentially with \(h^{(1,1)}\). Hence, for larger values smart ways are needed to parse the landscape of possible configurations.</p>
+
+<h4 id="the-package">The Package</h4>
+
+<p><a href="https://github.com/robin-schneider/gymCICY" target="_blank" rel="noopener noreferrer">gymCICY</a> lets you explore heterotic line bundle models via the successfull OpenAI <a href="https://gym.openai.com/" target="_blank" rel="noopener noreferrer">gym</a> interface. This python package contains two different settings to construct sums of line bundles. First, the <code class="language-plaintext highlighter-rouge">stacking</code> environment, which simulates the systematic construction of line bundle sums via stacking of five line bundles. Second, in <code class="language-plaintext highlighter-rouge">flipping</code> agents interact with the charges of the line bundles by either increasing or decreasing them with \(\pm 1\). You can install the package with</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pip install --user git+https://github.com/robin-schneider/gymCICY
+</span></code></pre></div></div>
+
+<p>it uses the <a href="https://github.com/robin-schneider/CICY" target="_blank" rel="noopener noreferrer">pyCICY</a> package for the reward-computations.</p>
+
 
   </article>
 
